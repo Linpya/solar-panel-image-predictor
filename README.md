@@ -4,8 +4,7 @@ This project uses transfer learning with the VGG16 model to classify solar panel
 
 ## 📂 Dataset
 Two datasets from Kaggle were combined:
-- [`solar-panels-dirt-detection`](https://www.kaggle.com/datasets/rasimtasdemir/solar-panels-dirt-detection)
-- [`solar-panel-dust-detection`](https://www.kaggle.com/datasets/ravirajsinh45/solar-panel-dust-detection)
+(https://www.kaggle.com/datasets/hemanthsai7/solar-panel-dust-detection/data)
 
 ## 🧠 Model
 - Base Model: **VGG16** (pretrained on ImageNet, frozen)
