@@ -2,9 +2,7 @@
 
 This project uses transfer learning with the VGG16 model to classify solar panel images as either **Clean** or **Dusty**. The dataset is preprocessed with image augmentation, split into training, validation, and test sets, and trained with class balancing to improve performance.
 
-## 📂 Dataset
-Two datasets from Kaggle were combined:
-(https://www.kaggle.com/datasets/hemanthsai7/solar-panel-dust-detection/data)
+
 
 ## 🧠 Model
 - Base Model: **VGG16** (pretrained on ImageNet, frozen)
