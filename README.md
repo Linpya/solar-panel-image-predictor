@@ -56,6 +56,9 @@ This project uses transfer learning with the VGG16 model to classify solar panel
 
 ---
 
+## 📁 Dataset Sources
+(https://www.kaggle.com/datasets/hemanthsai7/solar-panel-dust-detection/data)
+
 
 **Author**: Swapnil Paranjape  
 **Tools**: TensorFlow, Keras, PIL, Matplotlib, Seaborn  
