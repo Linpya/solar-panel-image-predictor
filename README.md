@@ -1,35 +1,63 @@
 # Solar Panel Dust Detection using VGG16
 
-This project uses transfer learning with the VGG16 model to classify solar panel images as either **Clean** or **Dusty**. The dataset is preprocessed with image augmentation, split into training, validation, and test sets, and trained with class balancing to improve performance.
-
-Dataset was used from Kaggle:
-(https://www.kaggle.com/datasets/hemanthsai7/solar-panel-dust-detection/data)
-
-
-## 🧠 Model
-- Base Model: **VGG16** (pretrained on ImageNet, frozen)
-- Custom Head: Flatten → Dense(256, ReLU) → Dropout(0.5) → Dense(2, Softmax)
-- Optimizer: Adam | Loss: Categorical Crossentropy
-
-## ⚙️ Key Features
-- Data Augmentation (rotation, zoom, shift, brightness)
-- Class Weighting for imbalance handling
-- Visualization of predictions and performance
-- Final model saved as `my_trained_vgg16_model.keras`
-
-## 📊 Results
-- Achieved high accuracy on validation and test sets
-- Visual inspection confirms effective predictions
-
-## 🏁 How to Run
-This notebook is designed to run in a Kaggle environment with the provided datasets. Simply execute all cells to preprocess data, train the model, and evaluate performance.
-
-## 📁 Output
-- Trained model saved as: `my_trained_vgg16_model.keras`
-- Accuracy/Loss plots and prediction visualizations
+This project uses transfer learning with the VGG16 model to classify solar panel images as either **Clean** or **Dusty**. It combines two datasets, applies data augmentation and class balancing, and trains a deep learning model to detect dust accumulation on solar panels.
 
 ---
 
+## 📊 Dataset Summary
+
+- **Train Set**: 2,390 images  
+  - Clean: 1,411  
+  - Dusty: 979
+
+- **Test Set**: 738 images  
+  - Clean: 425  
+  - Dusty: 313
+
+- **Validation Set**: 369 images  
+  - Clean: 212  
+  - Dusty: 157
+
+---
+
+## 🧠 Model Architecture
+
+| Layer         | Output Shape     | Parameters |
+|---------------|------------------|------------|
+| VGG16 (frozen)| (None, 9, 9, 512)| 14,714,688 |
+| Flatten       | (None, 41472)    | 0          |
+| Dense (ReLU)  | (None, 256)      | 10,617,088 |
+| Dropout (0.5) | (None, 256)      | 0          |
+| Dense (Softmax)| (None, 2)       | 514        |
+| **Total**     |                  | **25,332,290** |
+
+---
+
+## ✅ Evaluation Results
+
+- **Test Accuracy**: 81.98%  
+- **Test Loss**: 0.4457
+
+---
+
+## 🔧 Key Features
+
+- VGG16 transfer learning with custom classifier head
+- Real-time data augmentation for improved generalization
+- Class weighting to handle data imbalance
+- Visualization of predictions with true and predicted labels
+
+---
+
+## 💾 Output
+
+- Trained model saved as: `my_trained_vgg16_model.keras`
+- Accuracy/loss plots and labeled test image visualizations
+
+---
+
+
 **Author**: Swapnil Paranjape  
-**Environment**: Python, TensorFlow, Keras, Matplotlib, Seaborn
+**Tools**: TensorFlow, Keras, PIL, Matplotlib, Seaborn  
+**Environment**: Python
 
