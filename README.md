@@ -1,6 +1,6 @@
 # Solar Panel Dust Detection using VGG16
 
-This project uses transfer learning with the VGG16 model to classify solar panel images as either **Clean** or **Dusty**. It combines two datasets, applies data augmentation and class balancing, and trains a deep learning model to detect dust accumulation on solar panels.
+This project uses transfer learning with the VGG16 model to classify solar panel images as either **Clean** or **Dusty**. It applies data augmentation and class balancing, and trains a deep learning model to detect dust accumulation on solar panels.
 
 ---
 
